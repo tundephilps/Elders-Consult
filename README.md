@@ -1,0 +1,7 @@
+i wish i have listen to my dad
+'THE words of our elders are statements of wisdom' so says an adage.all youths who may be opportuned to read this story of mine should always take to whatever their fathers say to them because it is for their good
+it all started last year towards the end of my final examination.as i was preparing and studying harding for the exam,I came in contact with a girl who also coming to same centre with me. the girl was so beatiful that every boys in that centre wished to have her as their girlfriend.her name  is jeilat
+somehow in one of the periods of waiting for the english,she came to me where i was discussing with some student.she excused me out of their midst and we went to another place to discuss.she told me about her love for me.i was shocked but to be honest,i was happy that such a beatiful girl other guys had been trying to run after,now professed her love for me,a lucky boy i am',i thought.after  the day's studies,we both went to our home.were we get home my mom warn me to beware of girlfriend now. my dad also adives me to take my book serious,but contining making love to  jeilat.i do not prepare for the exam.i failed the exam.
+deji story
+NEW yam festival in eda ekiti
+during the last holiday i had the golden opportunity totravel to eda to spend the holiday with my uncle. poeple are dancing,singing,showing ther driwings.playing haveing fun and eating difrent type of food from yam like yam porageand powded yam.  thenk you for your time. 
