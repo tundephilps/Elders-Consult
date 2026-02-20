@@ -14,19 +14,6 @@ interface Property {
 
 const properties: Property[] = [
   {
-    type: "For Sale",
-    image:
-      "https://images.arrivedhomes.com/properties/541/ea9b0425a74167fae835bf091dfc613a.jpg?tr=dpr-auto,pr-true,di-logo_icon_CwvvbRzw9.svg,c-maintain_ratio,ar-5-3,w-692",
-    agentImage:
-      "https://images.arrivedhomes.com/properties/541/ea9b0425a74167fae835bf091dfc613a.jpg?tr=dpr-auto,pr-true,di-logo_icon_CwvvbRzw9.svg,c-maintain_ratio,ar-5-3,w-692",
-    agentName: "Agent Tunji",
-    postedDate: "1/09/23",
-    bgColor: "#2d6ae01a",
-    color: "#2d6ae0",
-    description:
-      "Duplex at Lake View Estate, with 4 bedrooms, 4 toilets, 600sq compound, a swimming pool with parking garage",
-  },
-  {
     type: "Rental",
     image:
       "https://cf.bstatic.com/xdata/images/hotel/max1024x768/468867448.jpg?k=0f7b7af2588987012efe825a199fd26e765400c95c4ea2d187202c01694c010f&o=&hp=1",
