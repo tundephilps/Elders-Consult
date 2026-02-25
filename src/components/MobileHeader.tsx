@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import Logo from "../assets/Logo.png";
+import Logo from "../assets/Logo2.png";
 
 const MobileHeader = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
@@ -14,7 +14,7 @@ const MobileHeader = () => {
         <nav className="font-inter mx-auto h-auto  lg:relative lg:top-0">
           <div className="flex flex-col px-6 py-6 lg:flex-row lg:items-center lg:justify-between lg:px-10 lg:py-4 xl:px-20">
             <Link to="#">
-              <img src={Logo} alt="" className="inline-block  " />
+              <img src={Logo} alt="" className="inline-block h-14 " />
             </Link>
 
             {/* Burger Menu */}

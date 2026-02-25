@@ -1,3 +1,5 @@
+import How from "../assets/How.png";
+
 const HowitWorks = () => {
   return (
     <section>
@@ -54,7 +56,7 @@ const HowitWorks = () => {
 
           <div className="flex-1">
             <img
-              src="https://lh3.googleusercontent.com/_n-k4CWtfIb_DlBmWmy4J8ShE8lDME7lnvDbxmYxK89a0u4VGIaKrumtaxhUNHrawFbokYxZBUx_pJHch8XwXkIA33PstsSjRIjaMnBUMEpy=s750"
+              src={How}
               alt="Image showing dashboard of the app"
               className="inline-block h-full w-full "
             />

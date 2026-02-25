@@ -28,7 +28,7 @@ const Terms = () => {
           <div className="flex-col flex min-w-full items-start gap-y-10">
             <div className="flex-col flex max-w-[80%] items-start [border-bottom:1px_solid_rgb(226,_226,_226)] max-[479px]:max-w-none py-4 min-w-full sm:min-w-[80%]">
               <h6 className="text-base font-extrabold">
-                LAST UPDATED AS OF OCTOBER 17, 2023
+                LAST UPDATED AS OF JANUARY 1st, 2026
               </h6>
             </div>
             <div className="flex-col flex items-start gap-y-10 sm:gap-y-[46px]">

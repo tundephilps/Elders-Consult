@@ -1,6 +1,6 @@
-import lola from "../assets/lola.jpg";
+import Boss from "../assets/Boss.png";
 import Chatbot from "../components/Chatbot";
-import Yinka from "../assets/Yinka.jpg";
+import Logo from "../assets/LOGO22.png";
 
 const AboutUs = () => {
   return (
@@ -8,39 +8,47 @@ const AboutUs = () => {
       <section className="">
         <div className="py-16 md:py-24 lg:py-32 mx-auto w-full max-w-7xl px-5 md:px-10">
           <div className="flex flex-col items-start gap-8 lg:gap-24">
-            <div className="flex max-w-[592px] flex-col items-start gap-8 lg:gap-14">
-              <h2 className="font-bold text-3xl md:text-5xl">Meet Our Ceo</h2>
-              <p className="flex-col text-[#808080] max-[479px]:text-sm">
-                Realtor Oluyomi Ojo is the Chief Executive Officer of Elder
-                Consult, a leading real estate and facilities management company
-                providing comprehensive property solutions across residential,
-                commercial, and corporate sectors. With over 20 years of
-                professional experience in real estate, property management, and
-                facilities operations.
-                <br /> Oluyomi Ojo brings deep industry knowledge and strategic
-                leadership to the organization. Oluyomi Ojo holds a Bachelor’s
-                Degree (Hons) from Obafemi Awolowo University, and has further
-                strengthened his expertise through professional training and
-                certifications in real estate and facilities management. He is a
-                Certified Member of IFMA, AFMPN, AEAN amongst others. As CEO,
-                Oluyomi Ojo is responsible for setting the company’s strategic
-                direction, overseeing operations, and ensuring the delivery of
-                high-quality, compliant, and cost-effective property and
-                facilities management services.
-                <br /> He has successfully led teams in managing diverse
-                property portfolios, optimizing asset value, improving
-                operational efficiency, and maintaining strong client
-                relationships. Driven by professionalism, integrity, and
-                continuous improvement, Oluyomi Ojo remains committed to
-                advancing industry standards and positioning Elder Consult as a
-                trusted partner in real estate and facilities management.
-              </p>
+            <div className="grid lg:grid-cols-2 gap-8">
+              <div className="flex  flex-col items-start gap-8 lg:gap-14">
+                <h2 className="font-bold text-3xl md:text-5xl">Meet Our Ceo</h2>
+                <p className="flex-col text-[#808080] max-[479px]:text-sm">
+                  Realtor Oluyomi Ojo is the Chief Executive Officer of Elder
+                  Consult, a leading real estate and facilities management
+                  company providing comprehensive property solutions across
+                  residential, commercial, and corporate sectors. With over 20
+                  years of professional experience in real estate, property
+                  management, and facilities operations.
+                  <br /> Oluyomi Ojo brings deep industry knowledge and
+                  strategic leadership to the organization. Oluyomi Ojo holds a
+                  Bachelor’s Degree (Hons) from Obafemi Awolowo University, and
+                  has further strengthened his expertise through professional
+                  training and certifications in real estate and facilities
+                  management. He is a Certified Member of IFMA, AFMPN, AEAN
+                  amongst others. As CEO, Oluyomi Ojo is responsible for setting
+                  the company’s strategic direction, overseeing operations, and
+                  ensuring the delivery of high-quality, compliant, and
+                  cost-effective property and facilities management services.
+                  <br /> He has successfully led teams in managing diverse
+                  property portfolios, optimizing asset value, improving
+                  operational efficiency, and maintaining strong client
+                  relationships. Driven by professionalism, integrity, and
+                  continuous improvement, Oluyomi Ojo remains committed to
+                  advancing industry standards and positioning Elder Consult as
+                  a trusted partner in real estate and facilities management.
+                </p>
+              </div>
+              <img
+                src={Boss}
+                alt=""
+                className=" h-full w-full object-cover rounded-2xl"
+              />
             </div>
+
             <div className="grid place-items-start gap-10 max-[991px]:gap-x-8 max-[767px]:gap-y-12 grid-cols-1 lg:grid-cols-2">
               <img
-                src={lola}
+                src={Logo}
                 alt=""
-                className="inline-block h-full w-full object-cover rounded-2xl"
+                className=" h-full w-full object-cover rounded-2xl"
               />
               <div className="flex w-full flex-col items-start gap-5 border border-solid border-black p-20 rounded-2xl">
                 <h2 className="font-bold text-3xl md:text-5xl">Our Mission</h2>
