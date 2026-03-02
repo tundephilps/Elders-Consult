@@ -13,7 +13,18 @@ interface Property {
 }
 
 const properties: Property[] = [
-
+  {
+    type: "Short Let",
+    image: "https://wakaholic.com/wp-content/uploads/2021/01/IMG_8276.png",
+    agentImage:
+      "https://assets.website-files.com/647e296b89c00bcfafccf696/647f1999f67c0926f8b9ecfc_Ellipse%2015-2.png",
+    agentName: "Agent Lola",
+    postedDate: "6 mins ago",
+    bgColor: "#31b3d21f",
+    color: "#31b3d2",
+    description:
+      "Duplex at Lake View Estate, with 4 bedrooms, 4 toilets, 600sq compound, a swimming pool with parking garage",
+  },
   {
     type: "Short Let",
     image: "https://wakaholic.com/wp-content/uploads/2021/01/IMG_8276.png",
