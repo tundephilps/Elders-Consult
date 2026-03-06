@@ -1,4 +1,4 @@
-import { MdLocationPin, MdEmail } from "react-icons/md";
+import { MdLocationPin, MdPhone } from "react-icons/md";
 
 const Footer = () => {
   return (
@@ -14,14 +14,11 @@ const Footer = () => {
           <div className="mt-8 flex-none md:mt-0">
             <div className="mb-4 flex max-w-[272px] flex-row items-start gap-2">
               <MdLocationPin className="text-5xl text-indigo-600" />
-              <p className="text-white">
-                {" "}
-                20 foyeke close, Niger River Basin, Ilorin, Kwara State, Nigeria
-              </p>
+              <p className="text-white"> AHCN TOWERS, AGIDINGBI IKEJA LAGOS</p>
             </div>
             <div className="mb-4 flex max-w-[272px] flex-row gap-2 items-start">
-              <MdEmail className="text-3xl text-indigo-600" />
-              <p className="text-white">Tuletoaks@gmail.com</p>
+              <MdPhone className="text-3xl text-indigo-600" />
+              <p className="text-white">08023405754 / 08151209557</p>
             </div>
           </div>
         </div>

@@ -1,7 +1,7 @@
 import { PiChats } from "react-icons/pi";
 
 const Chatbot = () => {
-  const whatsappNumber = "+2348032422357"; // Replace with your WhatsApp number
+  const whatsappNumber = "+2348023405754"; // Replace with your WhatsApp number
   const startWhatsAppChat = () => {
     const whatsappLink = `https://wa.me/${whatsappNumber}`;
     window.open(whatsappLink, "_blank");

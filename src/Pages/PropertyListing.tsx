@@ -1,9 +1,11 @@
 import { Link } from "react-router-dom";
 import Chatbot from "../components/Chatbot";
+import House from "../../src/assets/House.jpg";
 
-interface Property {
+export interface Property {
+  id: number;
   type: string;
-  image: string;
+  image?: string;
   agentImage: string;
   agentName: string;
   postedDate: string;
@@ -11,139 +13,163 @@ interface Property {
   description: string;
   color: string;
   mode: string;
+  title: string;
+  price: string;
+  originalPrice: string;
+  rating: number;
+  reviews: number;
+  location: string;
+  fullDescription: string;
+  bedrooms?: number;
+  bathrooms?: number;
+  size?: string;
+  status: string;
+  videos?: string[];
 }
 
-const properties: Property[] = [
+export const properties: Property[] = [
   {
+    id: 1,
     type: "For Sale",
-    image:
-      "https://images.nigeriapropertycentre.com/properties/images/1429572/063020de15933e-land-with-r-of-o-residential-land-for-sale-idu-industrial-abuja.jpg",
+    title: "Semi detached (4 B/R duplex)",
+    image: House,
     agentImage:
-      "https://images.arrivedhomes.com/properties/541/ea9b0425a74167fae835bf091dfc613a.jpg?tr=dpr-auto,pr-true,di-logo_icon_CwvvbRzw9.svg,c-maintain_ratio,ar-5-3,w-692",
-    agentName: "Agent Tunji",
-    postedDate: "1/09/23",
-    mode: "Avaliable",
+      "https://images.arrivedhomes.com/properties/541/ea9b0425a74167fae835bf091dfc613a.jpg",
+    agentName: "Agent Yomi Ojo",
+    postedDate: "1/03/26",
+    mode: "Available",
     bgColor: "#E01A2D1A",
     color: "#E01A2D",
+    location: "Green Hill Estate Pen Cinema Agege",
+    price: "N200m",
+    originalPrice: "",
+    rating: 5,
+    reviews: 47,
+    status: "Available",
     description:
-      "Several Acres of land situated at Ajia oketo Near Oluwo AArea, Ona Ara Local Government Area, Ibadan, Oyo State, Nigeria",
+      "Semi detached (4 B/R duplex) with solar inverter and all rooms en suite.",
+    fullDescription:
+      "Beautiful semi detached duplex with 3.5kv solar inverter, all rooms en suite and guaranteed security.",
+    videos: [
+      "https://www.youtube.com/embed/9R9WOtIH6bw",
+      "https://www.youtube.com/embed/6CIvSZ3LWFc",
+      "https://www.youtube.com/embed/1Icy4Db8gMY",
+    ],
   },
-  {
-    type: "Rental",
-    image:
-      "https://cf.bstatic.com/xdata/images/hotel/max1024x768/468867448.jpg?k=0f7b7af2588987012efe825a199fd26e765400c95c4ea2d187202c01694c010f&o=&hp=1",
-    agentImage:
-      "https://assets.website-files.com/647e296b89c00bcfafccf696/647f199ab66979935fa34903_Ellipse%2015-1.png",
-    agentName: "Agent Eniola",
-    postedDate: "2/23/23",
-    mode: "Sold",
-    bgColor: "#b984121a",
-    color: "#e7ac2f",
-    description:
-      "Duplex at Lake View Estate, with 4 bedrooms, 4 toilets, 600sq compound, a swimming pool with parking garage",
-  },
-  {
-    type: "Short Let",
-    image: "https://wakaholic.com/wp-content/uploads/2021/01/IMG_8276.png",
-    agentImage:
-      "https://assets.website-files.com/647e296b89c00bcfafccf696/647f1999f67c0926f8b9ecfc_Ellipse%2015-2.png",
-    agentName: "Agent Lola",
-    postedDate: "6 mins ago",
-    mode: "Sold",
-    bgColor: "#6A2DE01A",
-    color: "#6A2DE0",
-    description:
-      "2 bedroom,  2 toilets, 400sq compound, fully aircondtioned with 24hrs electrcity avaliable for short let",
-  },
+  // {
+  //   id: 2,
+  //   type: "Rental",
+  //   title: "",
+  //   image: "",
+  //   agentImage:
+  //     "https://assets.website-files.com/647e296b89c00bcfafccf696/647f199ab66979935fa34903_Ellipse%2015-1.png",
+  //   agentName: "Agent Eniola",
+  //   postedDate: "2/23/23",
+  //   mode: "Sold",
+  //   bgColor: "#b984121a",
+  //   color: "#e7ac2f",
+  //   location: "Lake View Estate, Lagos",
+  //   price: "N850,000/yr",
+  //   originalPrice: "N1,200,000/yr",
+  //   rating: 5,
+  //   reviews: 32,
+  //   bedrooms: 4,
+  //   bathrooms: 4,
+  //   size: "600sqm",
+  //   status: "Sold",
+  //   description: "Luxury 4-bedroom duplex with pool and garage.",
+  //   fullDescription:
+  //     "A stunning duplex nestled within the exclusive Lake View Estate.",
+  //   videos: ["https://www.youtube.com/embed/dQw4w9WgXcQ"],
+  // },
 ];
 
 const PropertyListing = () => {
   return (
-    <section className="bg-orange-100 bg-cover bg-center bg-no-repeat text-white">
-      <div className="mx-auto w-full max-w-7xl px-5 py-16 md:px-10 md:py-24 lg:py-32">
-        <div className="flex flex-col items-center">
-          <div className="mb-8 max-w-[800px] text-center md:mb-12 lg:mb-16">
-            <h2 className="text-3xl font-bold md:text-5xl text-indigo-800">
-              The latest properties on our Portfolio
-            </h2>
-            <div className="mx-auto mt-4 max-w-[528px]">
-              <p className="text-[#7c8aaa]">
-                Lorem ipsum dolor sit amet elit ut aliquam
-              </p>
-            </div>
-          </div>
+    <section className="bg-orange-100 text-white">
+      <div className="mx-auto max-w-7xl px-5 py-16">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-5xl font-bold text-indigo-800">
+            The latest properties on our Portfolio
+          </h2>
+          <p className="mt-4 text-[#7c8aaa]">
+            Discover premium listings tailored for you
+          </p>
+        </div>
 
-          <div className="mb-12 grid grid-cols-1 gap-5 sm:grid-cols-2 md:mb-16 md:grid-cols-3 lg:mb-20">
-            {properties.map((property, index) => (
-              <Link
-                to={"/PropertyDetails/:id"} // Include the property ID in the URL
-                className="flex flex-col gap-4 rounded-md bg-orange-600 px-4 py-8 text-white md:p-4"
-                key={index}
-              >
-                <div className="relative h-full w-full">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+          {properties.map((property) => (
+            <Link
+              key={property.id}
+              to={`/PropertyDetails/${property.id}`}
+              className="bg-orange-600 rounded-lg p-4 hover:scale-105 transition"
+            >
+              {/* Image (only if exists) */}
+              <div className="relative h-auto w-full">
+                {property.image && (
                   <img
                     src={property.image}
-                    alt="Blog Post Image"
-                    className="inline-block h-60 w-full rounded-md object-cover"
+                    alt={property.title}
+                    className="h-60 w-full object-cover rounded-md"
                   />
-                  <div
-                    className="absolute bottom-[-10%] right-[8%] flex h-16 w-16 flex-col items-center justify-center rounded-full border-4 border-solid border-[#f2f2f7]"
-                    style={{ backgroundColor: property.color }}
-                  >
-                    <img
-                      src="https://assets.website-files.com/647e296b89c00bcfafccf696/647e2bc55406ff0f6d8d2f1c_Vector.svg"
-                      alt="Blog Icon Image"
-                    />
-                    <p className="text-xs">{property.mode}</p>
-                  </div>
+                )}
+                <div
+                  className="absolute bottom-[-1%] right-[8%] flex h-16 w-16 flex-col items-center justify-center rounded-full border-4 border-solid border-[#f2f2f7]"
+                  style={{ backgroundColor: property.color }}
+                >
+                  <img
+                    src="https://assets.website-files.com/647e296b89c00bcfafccf696/647e2bc55406ff0f6d8d2f1c_Vector.svg"
+                    alt="Blog Icon Image"
+                  />
+                  <p className="text-xs">{property.mode}</p>
                 </div>
+              </div>
+              <div
+                className={`rounded-lg px-2 w-auto mt-4 py-1.5 text-[#2d6ae0]`}
+                style={{ backgroundColor: property.bgColor }}
+              >
+                <p className="font-semibold" style={{ color: property.color }}>
+                  {property.type}
+                </p>
+              </div>
 
-                <div className="flex w-full flex-col items-start gap-5">
-                  <div
-                    className={`rounded-lg px-2 py-1.5 text-[#2d6ae0]`}
-                    style={{ backgroundColor: property.bgColor }}
-                  >
-                    <p
-                      className="font-semibold"
-                      style={{ color: property.color }}
-                    >
-                      {property.type}
+              <h3 className="mt-4 font-bold">{property.title}</h3>
+              <p className="text-sm mt-2">{property.description}</p>
+              <div className="h-px w-full bg-black my-3"></div>
+              <div className="flex flex-row items-center">
+                <img
+                  src={property.agentImage}
+                  alt="Blog Author Image"
+                  className="mr-4 inline-block h-8 w-8 rounded-full"
+                />
+                <div className="flex flex-row items-center">
+                  <h6 className="mr-1 text-xs font-bold md:m-0 md:text-base">
+                    {property.agentName}
+                  </h6>
+                  <div className="flex items-start lg:items-center">
+                    <p className="ml-2 mr-2 text-sm text-gray max-[991px]:hidden">
+                      -
+                    </p>
+                    <p className="text-xs font-medium text-gray">
+                      Posted {property.postedDate}
                     </p>
                   </div>
-                  <p className="font-bold">{property.description}</p>
-                  <div className="h-px w-full bg-black"></div>
-                  <div className="flex flex-row items-center">
-                    <img
-                      src={property.agentImage}
-                      alt="Blog Author Image"
-                      className="mr-4 inline-block h-8 w-8 rounded-full"
-                    />
-                    <div className="flex flex-row items-center">
-                      <h6 className="mr-1 text-xs font-bold md:m-0 md:text-base">
-                        {property.agentName}
-                      </h6>
-                      <div className="flex items-start lg:items-center">
-                        <p className="ml-2 mr-2 text-sm text-gray max-[991px]:hidden">
-                          -
-                        </p>
-                        <p className="text-xs font-medium text-gray">
-                          Posted {property.postedDate}
-                        </p>
-                      </div>
-                    </div>
-                  </div>
                 </div>
-              </Link>
-            ))}
-          </div>
-          <a
-            href="#"
-            className="rounded-full bg-indigo-700 px-6 py-4 text-center font-bold text-white transition hover:bg-[#081631]"
+              </div>
+            </Link>
+          ))}
+        </div>
+
+        <div className="mt-10 text-center">
+          <Link
+            to="#"
+            className="rounded-full bg-indigo-700 px-6 py-4 font-bold text-white hover:bg-[#081631] transition"
           >
             Load More Properties
-          </a>
+          </Link>
         </div>
       </div>
+
       <Chatbot />
     </section>
   );

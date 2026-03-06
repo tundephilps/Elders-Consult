@@ -18,7 +18,7 @@ const Results = () => {
             <div className="right-0absolute right-0 top-[29%] h-2/5 [border-right:1px_solid_rgb(230,_230,_230)] max-[479px]:hidden"></div>
           </div>
           <div className="relative grid grid-flow-row grid-cols-1 gap-4 bg-white rounded-md p-8 md:p-10">
-            <h3 className="font-bold text-3xl md:text-5xl">41%</h3>
+            <h3 className="font-bold text-3xl md:text-5xl">25%</h3>
             <div className="text-[#636262] text-sm sm:text-sm">
               Our business has seen remarkable growth, with a year-over-year
               increase of 25% in new customers. This demonstrates our continuous

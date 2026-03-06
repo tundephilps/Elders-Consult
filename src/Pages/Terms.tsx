@@ -12,7 +12,7 @@ const Terms = () => {
               </h1>
               <div className="flex-col text-[#808080] text-sm sm:text-base">
                 Read our terms below to learn more about your rights and
-                responsibilities as a Tulet Oaks Customer.
+                responsibilities as a Elders Consult Customer.
               </div>
             </div>
             <div className="flex lg:max-w-[600px] w-[450px] items-center justify-center object-cover  lg:min-h-[400px]">
