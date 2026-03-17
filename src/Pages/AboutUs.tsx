@@ -1,4 +1,4 @@
-import Boss from "../assets/Boss.png";
+import Boss from "../assets/Boss2.jpg";
 import Chatbot from "../components/Chatbot";
 import Logo from "../assets/LOGO22.png";
 

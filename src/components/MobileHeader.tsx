@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import Logo from "../assets/Logo2.png";
+import Logo from "../assets/Logo.png";
 
 const MobileHeader = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
@@ -17,13 +17,13 @@ const MobileHeader = () => {
         <nav className="font-inter mx-auto h-auto lg:relative lg:top-0">
           <div className="flex flex-col px-6 py-6 lg:flex-row lg:items-center lg:justify-between lg:px-10 lg:py-4 xl:px-20">
             <Link to="#" onClick={closeMenu}>
-              <img src={Logo} alt="" className="inline-block h-14" />
+              <img src={Logo} alt="" className="inline-block h-full w-full" />
             </Link>
 
-            {/* Burger Menu */}
+            {/* Burger Men u */}
             <Link
               to="#"
-              className="absolute right-5 top-14 lg:hidden animate-bounce"
+              className="absolute right-8 top-14 lg:hidden animate-bounce"
               onClick={toggleMenu}
             >
               <svg

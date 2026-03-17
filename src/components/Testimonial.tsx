@@ -1,5 +1,5 @@
-import tayo from "../assets/tayo.jpg";
-import adeyemi from "../assets/adeyem.jpg";
+import tayo from "../assets/Test1.jpg";
+import adeyemi from "../assets/Test2.jpg";
 import tunde from "../assets/tunde.jpg";
 
 interface TestimonialData {
@@ -11,20 +11,20 @@ interface TestimonialData {
 
 const testimonialData: TestimonialData[] = [
   {
-    text: "Outstanding service! The Tulet real estate  made finding our dream home a breeze. Professional, efficient, and reliable.",
-    author: "Tayo",
+    text: "Outstanding service! The Elders Consult real estate  made finding our dream home a breeze. Professional, efficient, and reliable.",
+    author: "Oludare Koleade",
     position: "Lawyer",
     imageSrc: tayo,
   },
   {
     text: "I can't thank the real estate team enough. They turned our house-hunting into a delightful experience with their expertise and friendliness",
-    author: "Adeyemi",
+    author: "Faruq Lawal",
     position: "Business Man",
     imageSrc: adeyemi,
   },
   // Add more testimonials here
   {
-    text: "Absolutely top-notch! Tulet Oaks exceeded all our expectations. We found the perfect property and couldn't be happier. Highly recommended!",
+    text: "Absolutely top-notch! Elders Consult exceeded all our expectations. We found the perfect property and couldn't be happier. Highly recommended!",
     author: "Tunde Philps",
     position: "Developer",
     imageSrc: tunde,
@@ -42,9 +42,7 @@ const Testimonial = () => {
                 What our clients are saying
               </h2>
               <div className="mx-auto w-full max-w-lg">
-                <p className="tracking-[0.2px] text-[#7c8aaa]">
-                  Lorem ipsum dolor sit amet elit ut aliquam
-                </p>
+                <p className="tracking-[0.2px] text-[#7c8aaa]"></p>
               </div>
             </div>
           </div>

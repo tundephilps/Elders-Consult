@@ -17,6 +17,12 @@ const PropertyDetails = () => {
     );
   }
 
+  const whatsappNumber = "+2348023405754"; // Replace with your WhatsApp number
+  const startWhatsAppChat = () => {
+    const whatsappLink = `https://wa.me/${whatsappNumber}`;
+    window.open(whatsappLink, "_blank");
+  };
+
   return (
     <div className="bg-white py-10 px-4 md:px-10">
       <Link to="/PropertyListing" className="text-indigo-500 underline">
@@ -41,7 +47,7 @@ const PropertyDetails = () => {
               <h3 className="text-lg font-semibold mb-4">Property Videos</h3>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {property.videos.slice(0, 5).map((video, index) => (
+                {property.videos.slice(0, 6).map((video, index) => (
                   <iframe
                     key={index}
                     src={video}
@@ -50,6 +56,20 @@ const PropertyDetails = () => {
                     allowFullScreen
                   />
                 ))}
+                {property.homeimage1 && (
+                  <img
+                    src={property.homeimage1}
+                    alt={property.title}
+                    className="w-full h-fit rounded-lg"
+                  />
+                )}
+                {property.homeimage2 && (
+                  <img
+                    src={property.homeimage2}
+                    alt={property.title}
+                    className="w-full h-fit rounded-lg"
+                  />
+                )}
               </div>
             </div>
           )}
@@ -72,7 +92,12 @@ const PropertyDetails = () => {
           <div className="mt-6 text-gray-600">{property.fullDescription}</div>
 
           <div className="mt-8">
-            <button className="bg-indigo-600 text-white px-6 py-3 rounded-lg hover:bg-indigo-700 transition">
+            <button
+              data-number={whatsappNumber}
+              data-message="Hello, I have a question"
+              onClick={startWhatsAppChat}
+              className="bg-indigo-600 text-white px-6 py-3 rounded-lg hover:bg-indigo-700 transition"
+            >
               Schedule Inspection
             </button>
           </div>

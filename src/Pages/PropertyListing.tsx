@@ -1,11 +1,20 @@
 import { Link } from "react-router-dom";
 import Chatbot from "../components/Chatbot";
+
+import House1 from "../../src/assets/Prop1A.jpg";
+
+import House2 from "../../src/assets/Prop1B.jpg";
+
+import House3 from "../../src/assets/Prop2A.jpg";
+
 import House from "../../src/assets/House.jpg";
 
 export interface Property {
   id: number;
   type: string;
   image?: string;
+  homeimage1?: string;
+  homeimage2?: string;
   agentImage: string;
   agentName: string;
   postedDate: string;
@@ -32,7 +41,7 @@ export const properties: Property[] = [
     id: 1,
     type: "For Sale",
     title: "Semi detached (4 B/R duplex)",
-    image: House,
+    image: House1,
     agentImage:
       "https://images.arrivedhomes.com/properties/541/ea9b0425a74167fae835bf091dfc613a.jpg",
     agentName: "Agent Yomi Ojo",
@@ -48,42 +57,75 @@ export const properties: Property[] = [
     status: "Available",
     description:
       "Semi detached (4 B/R duplex) with solar inverter and all rooms en suite.",
-    fullDescription:
-      "Beautiful semi detached duplex with 3.5kv solar inverter, all rooms en suite and guaranteed security.",
+    fullDescription: `
+Beautiful semi detached duplex with 3.5kv solar inverter, all rooms en suite and guaranteed security.
+-----------------------------------
+For sale: Semi detached (4 B/R duplex)
+
+N200m
+
+Location: Green Hill Estate Pen Cinema Agege.
+
+It comes with 3.5kv solar inverter 
+
+All rooms en suite 
+
+Security guaranteed
+`,
     videos: [
       "https://www.youtube.com/embed/9R9WOtIH6bw",
       "https://www.youtube.com/embed/6CIvSZ3LWFc",
       "https://www.youtube.com/embed/1Icy4Db8gMY",
+      // "https://www.youtube.com/embed/AWM5OTm89Xo?si=twU-P--PM3mUJcK_",
+      // "https://www.youtube.com/embed/5E8yXugWj_Y?si=ASEk53OMeKtZOvnO",
+      // "https://www.youtube.com/embed/U9BVgvs2cDQ?si=TNuId68vZc2EWmb1",
     ],
-  },
-  // {
-  //   id: 2,
-  //   type: "Rental",
-  //   title: "",
-  //   image: "",
-  //   agentImage:
-  //     "https://assets.website-files.com/647e296b89c00bcfafccf696/647f199ab66979935fa34903_Ellipse%2015-1.png",
-  //   agentName: "Agent Eniola",
-  //   postedDate: "2/23/23",
-  //   mode: "Sold",
-  //   bgColor: "#b984121a",
-  //   color: "#e7ac2f",
-  //   location: "Lake View Estate, Lagos",
-  //   price: "N850,000/yr",
-  //   originalPrice: "N1,200,000/yr",
-  //   rating: 5,
-  //   reviews: 32,
-  //   bedrooms: 4,
-  //   bathrooms: 4,
-  //   size: "600sqm",
-  //   status: "Sold",
-  //   description: "Luxury 4-bedroom duplex with pool and garage.",
-  //   fullDescription:
-  //     "A stunning duplex nestled within the exclusive Lake View Estate.",
-  //   videos: ["https://www.youtube.com/embed/dQw4w9WgXcQ"],
-  // },
-];
+    homeimage1: House1,
 
+    homeimage2: House2,
+  },
+  {
+    id: 2,
+    type: "For Sale",
+    title: "CITY VIEW STUDIO APARTMENTS",
+    image: House,
+    agentImage:
+      "https://images.arrivedhomes.com/properties/541/ea9b0425a74167fae835bf091dfc613a.jpg",
+    agentName: "Agent Yomi Ojo",
+    postedDate: "1/03/26",
+    mode: "Available",
+    bgColor: "#E01A2D1A",
+    color: "#E01A2D",
+    location: "",
+    price: "N200m",
+    originalPrice: "",
+    rating: 5,
+    reviews: 47,
+    status: "Available",
+    description: "CITY VIEW STUDIO APARTMENTS",
+    fullDescription: `
+-----------------------------------
+*Reportage Tower Price Update*
+
+*CITYVIEW*
+Studio Apartment  - SOLD OUT
+1 Bedroom Apartment:  $199,000 - $228,000
+2 Bedroom Apartment: $299,000  - $343,000
+
+*LAGOON VIEW*
+Studio Apartment: SOLD OUT
+1 Bedroom Apartment: $210,000  - $237,000
+2 Bedroom Apartment: $314,000  - $358,000
+3 Bedroom Apartment: $424,000 - $464,000
+`,
+    videos: [
+      "https://www.youtube.com/embed/AWM5OTm89Xo?si=twU-P--PM3mUJcK_",
+      "https://www.youtube.com/embed/5E8yXugWj_Y?si=ASEk53OMeKtZOvnO",
+      "https://www.youtube.com/embed/U9BVgvs2cDQ?si=TNuId68vZc2EWmb1",
+    ],
+    homeimage1: House3,
+  },
+];
 const PropertyListing = () => {
   return (
     <section className="bg-orange-100 text-white">
@@ -134,7 +176,9 @@ const PropertyListing = () => {
               </div>
 
               <h3 className="mt-4 font-bold">{property.title}</h3>
-              <p className="text-sm mt-2">{property.description}</p>
+              <p className="text-gray-100 whitespace-pre-line">
+                {property.fullDescription}
+              </p>
               <div className="h-px w-full bg-black my-3"></div>
               <div className="flex flex-row items-center">
                 <img
