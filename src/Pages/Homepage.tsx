@@ -5,13 +5,16 @@ import Results from "../components/Results";
 import Testimonial from "../components/Testimonial";
 import NewsLetter from "../components/NewsLetter";
 import Chatbot from "../components/Chatbot";
+import Hero2 from "../components/Hero2";
+import AboutSection from "../components/AboutSection";
 
 export const Homepage = () => {
   return (
     <>
-      <Hero />
-      <HowitWorks />
-      <Offer />
+      <Hero2 />
+      <AboutSection />
+      {/* <HowitWorks /> */}
+      {/* <Offer /> */}
       <Results />
       <Testimonial />
       <NewsLetter />

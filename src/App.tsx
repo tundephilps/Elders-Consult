@@ -9,11 +9,13 @@ import PropertyListing from "./Pages/PropertyListing";
 import PropertyDetails from "./Pages/PropertyDetails";
 import AboutUs from "./Pages/AboutUs";
 import MobileHeader from "./components/MobileHeader";
+import Header2 from "./components/Header2";
 
 function App() {
   return (
     <Router>
-      <Header />
+      {/* <Header /> */}
+      <Header2 />
       <MobileHeader />
       <Routes>
         <Route path="/" element={<Homepage />} />
