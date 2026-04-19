@@ -1,15 +1,29 @@
 import { useEffect, useRef, useState } from "react";
 import House2 from "../assets/House2.png";
 
-const stats = [
+interface Stat {
+  value: number;
+  suffix: string;
+  label: string;
+}
+
+interface StatItemProps extends Stat {
+  trigger: boolean;
+}
+
+const stats: Stat[] = [
   { value: 8, suffix: "K+", label: "Houses Available" },
   { value: 6, suffix: "K+", label: "Houses Sold" },
   { value: 2, suffix: "K+", label: "Trusted Agents" },
 ];
 
-// Animated counter hook
-function useCountUp(target, duration = 1800, trigger) {
-  const [count, setCount] = useState(0);
+function useCountUp(
+  target: number,
+  duration: number = 1800,
+  trigger: boolean
+): number {
+  const [count, setCount] = useState<number>(0);
+
   useEffect(() => {
     if (!trigger) return;
     let start = 0;
@@ -25,10 +39,11 @@ function useCountUp(target, duration = 1800, trigger) {
     }, 16);
     return () => clearInterval(timer);
   }, [target, duration, trigger]);
+
   return count;
 }
 
-function StatItem({ value, suffix, label, trigger }) {
+function StatItem({ value, suffix, label, trigger }: StatItemProps) {
   const count = useCountUp(value, 1600, trigger);
   return (
     <div className="flex flex-col gap-1">
@@ -48,8 +63,8 @@ function StatItem({ value, suffix, label, trigger }) {
 }
 
 export default function AboutSection() {
-  const sectionRef = useRef(null);
-  const [triggered, setTriggered] = useState(false);
+  const sectionRef = useRef<HTMLElement>(null);
+  const [triggered, setTriggered] = useState<boolean>(false);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -71,21 +86,14 @@ export default function AboutSection() {
         fontFamily: "'DM Sans', sans-serif",
       }}
     >
-      <div className=" mx-auto flex lg:flex-row flex-col  items-center gap-16">
-        {/* Left: House image card */}
-        <img src={House2} className="h-auto w-auto" />
+      <div className="mx-auto flex lg:flex-row flex-col items-center gap-16">
+        {/* Left: House image */}
+        <img src={House2} alt="Dream Home" className="h-auto w-1/2" />
 
         {/* Right: Text + Stats */}
         <div className="flex flex-col gap-6">
-          <h2
-            className="lg:text-6xl font-bold text-gray-900 leading-tight"
-            style={{
-              fontFamily: "'Playfair Display', serif",
-              letterSpacing: "-0.02em",
-              maxWidth: "",
-            }}
-          >
-            We Help You To Find Your Dream Home
+          <h2 className="lg:text-5xl text-4xl text-uppercase font-bold text-[#3b2f2f] leading-tight">
+            We help you to maintain and manage your facilities
           </h2>
 
           <p
@@ -93,8 +101,8 @@ export default function AboutSection() {
             style={{ maxWidth: "380px" }}
           >
             From cozy cottages to luxurious estates, our dedicated team guides
-            you through every step of the journey, ensuring your dream home
-            becomes a reality
+            you through every step of the journey, ensuring efficient management
+            and maintenance of your property become a reality.
           </p>
 
           {/* Stats row */}

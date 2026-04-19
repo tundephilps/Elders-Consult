@@ -128,7 +128,7 @@ Studio Apartment: SOLD OUT
 ];
 const PropertyListing = () => {
   return (
-    <section className="bg-orange-100 text-white">
+    <section className="bg-[#FAF7F2] text-white">
       <div className="mx-auto max-w-7xl px-5 py-16">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-5xl font-bold text-indigo-800">
@@ -144,7 +144,7 @@ const PropertyListing = () => {
             <Link
               key={property.id}
               to={`/PropertyDetails/${property.id}`}
-              className="bg-orange-600 rounded-lg p-4 hover:scale-105 transition"
+              className="bg-[#DDC7BB] rounded-lg p-4 hover:scale-105 transition"
             >
               {/* Image (only if exists) */}
               <div className="relative h-auto w-full">

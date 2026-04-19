@@ -2,7 +2,7 @@ import { MdLocationPin, MdPhone } from "react-icons/md";
 
 const Footer = () => {
   return (
-    <footer className="block bg-orange-300">
+    <footer className="block bg-[#DDC7BB]">
       <div className="mx-auto w-full max-w-7xl px-5 py-16 md:px-10 md:py-24 lg:py-32">
         <div className="flex flex-col justify-between md:flex-row">
           <div className="w-full max-w-[560px]">

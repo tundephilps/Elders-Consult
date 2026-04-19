@@ -3,7 +3,7 @@ import HeroImage from "../../src/assets/Hero.png";
 
 export default function Hero2() {
   return (
-    <section className="w-full bg-[#f5efeb] py-10 px-6 md:px-16">
+    <section className="w-full bg-[#f5efeb] lg:py-0 py-10 px-6 md:px-16">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10">
         {/* LEFT CONTENT */}
         <div className="flex-1">
@@ -12,8 +12,9 @@ export default function Hero2() {
           </h1>
 
           <p className="mt-4 text-gray-600 max-w-md">
-            Explore our curated selection of exquisite properties meticulously
-            tailored to your unique dream home vision
+            Explore our curated selection of exquisite properties (residential
+            and commercial) meticulously tailored to your unique dream property
+            vision
           </p>
 
           <button className="mt-6 bg-[#3b2f2f] text-white px-6 py-3 rounded-lg hover:opacity-90 transition">
